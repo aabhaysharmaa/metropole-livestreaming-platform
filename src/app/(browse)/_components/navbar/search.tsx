@@ -29,7 +29,7 @@ export const Search = () => {
 			<Input type="text"
 				value={value}
 				onChange={(e) => setValue(e.target.value)}
-				className="bg-[#0A0C10] border-0 p-1 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent
+				className="bg-[#0A0C10]  border-0 p-1 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent
 			 focus-visible:right-offset-0
 			"
 				placeholder="Search"

@@ -6,7 +6,7 @@ interface SidebarProps {
 }
 
 export const useSideBar = create<SidebarProps>((set) => ({
-	collapsed: false ,
+	collapsed: false,
 	onExpand: () => set(() => ({collapsed : false })),
 	onCollapse: () => set(() => ({collapsed : true})),
 }))

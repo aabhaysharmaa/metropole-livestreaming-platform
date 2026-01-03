@@ -3,18 +3,16 @@ import { NextResponse } from 'next/server'
 
 const isPublicRoutes = createRouteMatcher(['/api/webhooks(.*)', "/"])
 const isProtectedRoutes = createRouteMatcher(['/dashboard'])
-
 export default Proxy(async (auth, req) => {
-	if (isPublicRoutes(req)) {
-		return NextResponse.next()
-	}
+  if (isPublicRoutes(req)) {
+    return NextResponse.next()
+  }
 
-	if (isProtectedRoutes(req)) {
-		await auth.protect()
-	}
-
-
+  if (isProtectedRoutes(req)) {
+    await auth.protect()
+  }
 })
+
 
 export const config = {
 	matcher: [

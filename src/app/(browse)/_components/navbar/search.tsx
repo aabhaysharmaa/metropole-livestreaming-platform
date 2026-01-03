@@ -29,7 +29,7 @@ export const Search = () => {
 			<Input type="text"
 				value={value}
 				onChange={(e) => setValue(e.target.value)}
-				className="bg-[#0A0C10] border-0 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent
+				className="bg-[#0A0C10] border-0 p-1 border-r-0 rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent
 			 focus-visible:right-offset-0
 			"
 				placeholder="Search"
@@ -37,7 +37,7 @@ export const Search = () => {
 			{value && (
 				<X onClick={clear} className="size-5 hover:text-white/60 transition absolute right-12 top-2.5 text-muted-foreground cursor-pointer" />
 			)}
-			<Button className="rounded-l-none cursor-pointer"  >
+			<Button className="rounded-l-none cursor-pointer  bg-[#3B9797]/50"  >
 				<SearchIcon className="size-5 text-muted-foreground" />
 			</Button>
 		</form>

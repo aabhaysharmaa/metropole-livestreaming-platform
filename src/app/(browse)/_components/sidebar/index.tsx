@@ -1,11 +1,11 @@
-import React from 'react'
-
-const sideBar = () => {
-  return (
-	<div>
-
-	</div>
-  )
+import Toggle from './toggle'
+import Wrapper from './wrapper';
+const Sidebar = () => {
+	return (
+		<Wrapper>
+			<Toggle />
+		</Wrapper>
+	)
 }
 
-export default sideBar
+export default Sidebar

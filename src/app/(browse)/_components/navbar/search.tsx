@@ -37,8 +37,8 @@ export const Search = () => {
 			{value && (
 				<X onClick={clear} className="size-5 hover:text-white/60 transition absolute right-12 top-2.5 text-muted-foreground cursor-pointer" />
 			)}
-			<Button className="rounded-l-none cursor-pointer  bg-[#3B9797]/50"  >
-				<SearchIcon className="size-5 text-muted-foreground" />
+			<Button   className="rounded-l-none cursor-pointer hover:bg-[#3B9797]/80 bg-[#3B9797]/50"  >
+				<SearchIcon className="size-5 text-white/60" />
 			</Button>
 		</form>
 	)

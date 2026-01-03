@@ -1,6 +1,6 @@
 import { verifyWebhook } from "@clerk/nextjs/webhooks";
 import { NextRequest } from "next/server";
-import prisma from "@/libs/prismadb";
+import prisma from "@/lib/prismadb";
 
 
 export async function POST(req: NextRequest) {

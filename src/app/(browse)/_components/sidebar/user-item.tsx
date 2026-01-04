@@ -22,7 +22,7 @@ const UserItem = ({
 	const pathname = usePathname();
 	const href = `/${username}`;
 	const { collapsed } = useSideBar();
-	// const isActive = pathname === href
+	const isActive = pathname === href;
 
 	return (
 		<Button
@@ -34,7 +34,7 @@ const UserItem = ({
 					<UserAvatar
 						username={username}
 						imageUrl={imageUrl}
-						// isLive={isLive}
+						isLive={false}
 					/>
 					{!collapsed && (
 						<p className="truncate">
@@ -54,9 +54,9 @@ export default UserItem;
 export const UserItemSkeleton = () => {
 	return (
 		<li className="flex items-center h-full gap-x-4 px-3 py-2">
-            <Skeleton className="min-h-8 min-w-8  rounded-full"/>
+			<Skeleton className="min-h-8 min-w-8  rounded-full" />
 			<div className="flex-1">
-				<Skeleton className="h-6"/>
+				<Skeleton className="h-6" />
 			</div>
 		</li>
 	)

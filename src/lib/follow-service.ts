@@ -1,7 +1,6 @@
 import prisma from "@/lib/prismadb";
 import { getSelf } from "./auth-service";
 
-
 export const isFollowingUser = async (id: string) => {
 	try {
 		const self = await getSelf();
@@ -94,12 +93,29 @@ export const unFollowUser = async (id: string) => {
 		const Follow = await prisma.follow.delete({
 			where: {
 				id: existingFollow.id
-			},include : {
+			}, include: {
 				following: true
 			}
 		})
 		return Follow;
 	} catch (error) {
 		console.log("Error in unFollowUser :", error);
+	}
+}
+
+export const getFollowedUsers = async () => {
+	try {
+		const self = await getSelf();
+		const followedUsers = await prisma.follow.findMany({
+			where: {
+				followerId: self.id
+			}, include: {
+				following: true
+			}
+		})
+		return followedUsers
+	} catch (error) {
+		console.log("Error in getFollowedUsers :", error)
+		return [];
 	}
 }

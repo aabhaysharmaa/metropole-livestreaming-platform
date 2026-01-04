@@ -24,6 +24,7 @@
         "react-dom": "19.2.3",
         "shadcn": "^3.6.2",
         "skeleton": "^4.9.0",
+        "sonner": "^2.0.7",
         "svix": "^1.84.1",
         "tailwind-merge": "^3.4.0",
         "usehooks-ts": "^3.1.1",
@@ -1514,6 +1515,8 @@
     "skeleton": ["skeleton@4.9.0", "", { "dependencies": { "@clack/prompts": "0.11.0", "colorette": "2.0.20", "commander": "14.0.2", "detect-indent": "7.0.2", "latest-version": "9.0.0", "magic-string": "0.30.21", "nanoid": "5.1.6", "node-html-parser": "7.0.1", "package-manager-detector": "1.6.0", "postcss": "8.5.6", "semver": "7.7.3", "svelte": "5.46.0", "tinyglobby": "0.2.15", "ts-morph": "27.0.2", "zimmerframe": "1.1.4" }, "bin": { "skeleton": "dist/index.mjs" } }, "sha512-/80ae1vhHpvIyQawLuLe56kSCE6BbIrbBScFV8HYFmTx3SybpU/rmLLvYqf5faiUObB0CL1n29vOIuPv6AXvDg=="],
 
     "sleuth": ["sleuth@0.1.1", "", { "dependencies": { "is-require": "0.0.1", "static-eval": "~0.1.0" } }, "sha512-x9msqhyOx9CoQnBH6cKz6CIi4brtwke+obbrFdA1Y7FVLhY/vn3By0Al1ydGLZM0hczWNp2Ahx/4G+3zebVIxQ=="],
+
+    "sonner": ["sonner@2.0.7", "", { "peerDependencies": { "react": "^18.0.0 || ^19.0.0 || ^19.0.0-rc", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-rc" } }, "sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w=="],
 
     "source-map": ["source-map@0.6.1", "", {}, "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="],
 

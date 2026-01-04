@@ -20,7 +20,7 @@ export default Sidebar;
 
 export const SidebarSkeleton = () => {
 	return (
-		<aside className='left-0  w-17.5 min-h-screen md:w-60  bg-[#252731] border-r border-[#2D2E35]'>
+		<aside className='left-0 w-17.5 min-h-screen md:w-60  bg-[#252731] border-r border-[#2D2E35]'>
 			<ToggleSkeleton/>
 			<RecommendedSkeleton />
 		</aside>

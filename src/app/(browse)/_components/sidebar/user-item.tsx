@@ -22,28 +22,28 @@ const UserItem = ({
 	const pathname = usePathname();
 	const href = `/${username}`;
 	const { collapsed } = useSideBar();
-	const isActive = pathname === href
+	// const isActive = pathname === href
 
 	return (
 		<Button
-			variant={"button"}
-			className={cn("w-full h-12 hover:bg-neutral-800", collapsed ? "justify-center" : "justify-start", isActive && "bg-accent")}
+
+			className={cn("w-full h-12 hover:bg-neutral-600 bg-[#252731]/50 ", collapsed ? "justify-center" : "justify-start", false && "bg-accent")}
 			asChild>
 			<Link href={href}>
 				<div className={cn("flex items-center w-full gap-x-4", collapsed && "justify-center")}>
 					<UserAvatar
 						username={username}
 						imageUrl={imageUrl}
-						isLive={isLive}
+						// isLive={isLive}
 					/>
 					{!collapsed && (
 						<p className="truncate">
 							{username}
 						</p>
 					)}
-					{!collapsed && isLive && (
+					{/* {!collapsed && isLive && (
 						<LiveBadge className="ml-auto" />
-					)}
+					)} */}
 				</div>
 			</Link>
 		</Button>

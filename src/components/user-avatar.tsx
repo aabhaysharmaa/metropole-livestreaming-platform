@@ -34,7 +34,7 @@ const UserAvatar = ({
 	const canShowBadge = showBadge && isLive;
 	return (
 		<div className="relative">
-			<Avatar className={cn("", isLive && "ring-2 ring-rose-500  outline-rose-400",
+			<Avatar className={cn("", isLive && "ring-2 ring-offset-2 ring-offset-neutral-800   ring-rose-500",
 				avatarSizes({ size })
 			)}>
 				<AvatarImage src={imageUrl || "/placeholder.png"} className="object-cover" />
@@ -44,7 +44,7 @@ const UserAvatar = ({
 				</AvatarFallback>
 			</Avatar>
 			{canShowBadge && (
-				<div className="absolute -bottom-2 left-1/2 transform  -translate-x-1/2">
+				<div className="absolute  -bottom-2 left-1/2 transform  -translate-x-1/2">
 					<LiveBadge />
 				</div>
 			)}

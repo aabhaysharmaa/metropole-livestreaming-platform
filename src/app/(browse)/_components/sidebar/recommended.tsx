@@ -4,14 +4,14 @@ import { User } from "@/generated/prisma/client";
 import { useSideBar } from "@/store/use-sidebar";
 import UserItem, { UserItemSkeleton } from "./user-item";
 interface RecommendedProps {
-	data: User[];
+	data: User[]
 }
 const Recommended = ({ data }: RecommendedProps) => {
 	const { collapsed } = useSideBar();
 
 	const showLabel = !collapsed && data.length > 0;
 	return (
-		<div>
+		<div className="mt-4">
 			{showLabel && (
 				<div className="pl-6 mb-4">
 					<p className="text-sm text-muted-foreground">Recommended</p>
@@ -29,7 +29,7 @@ const Recommended = ({ data }: RecommendedProps) => {
 	)
 }
 
-export default Recommended ;
+export default Recommended;
 
 export const RecommendedSkeleton = () => {
 	return (

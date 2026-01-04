@@ -35,7 +35,6 @@ const UserItem = ({
 						username={username}
 						imageUrl={imageUrl}
 						isLive={isLive}
-						showBadge
 					/>
 					{!collapsed && (
 						<p className="truncate">
@@ -51,12 +50,10 @@ const UserItem = ({
 	)
 }
 
-export default UserItem
-
-
+export default UserItem;
 export const UserItemSkeleton = () => {
 	return (
-		<li className="flex items-center gap-x-4 px-3 py-2">
+		<li className="flex items-center h-full gap-x-4 px-3 py-2">
             <Skeleton className="min-h-8 min-w-8  rounded-full"/>
 			<div className="flex-1">
 				<Skeleton className="h-6"/>

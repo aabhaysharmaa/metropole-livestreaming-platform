@@ -4,6 +4,7 @@ import prisma from "@/lib/prismadb";
 
 
 export const getRecommended = async () => {
+	await new Promise(resolve => setTimeout(resolve,10000))
 	const users = await prisma.user.findMany({
 		orderBy: {
 			createdAt: "desc"

@@ -43,7 +43,7 @@ const UserAvatar = ({
 					{username[username.length - 1]}
 				</AvatarFallback>
 			</Avatar>
-			{false && (
+			{canShowBadge && (
 				<div className="absolute -bottom-2 left-1/2 transform  -translate-x-1/2">
 					<LiveBadge />
 				</div>
@@ -54,7 +54,7 @@ const UserAvatar = ({
 
 export default UserAvatar ;
 
-interface UserAvatarSkeletonProps extends VariantProps<typeof avatarSizes> { };
+type UserAvatarSkeletonProps = VariantProps<typeof avatarSizes>;
 
 export const UserAvatarSkeleton = ({ size }: UserAvatarSkeletonProps) => {
 	return <>

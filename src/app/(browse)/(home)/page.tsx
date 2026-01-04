@@ -8,7 +8,6 @@ const {collapsed} = useSideBar((state) => state)
   return (
     <div className={cn("flex-1",collapsed ? "ml-17.5" : "md:ml-60")}>
       Home
-
     </div>
   )
 }

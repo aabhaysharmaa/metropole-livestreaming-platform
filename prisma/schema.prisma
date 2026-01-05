@@ -7,6 +7,7 @@
 generator client {
   provider        = "prisma-client"
   output          = "../src/generated/prisma"
+
 }
 
 datasource db {
@@ -40,7 +41,7 @@ model Stream {
 
   ingressId String? @unique
   serverUrl String? @db.Text
-  streamKey String?  @db.Text
+  streamKey String  @db.Text
 
   isLive              Boolean @default(false)
   isChatEnabled       Boolean @default(true)

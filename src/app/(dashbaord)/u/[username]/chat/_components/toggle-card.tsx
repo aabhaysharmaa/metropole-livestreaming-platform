@@ -1,6 +1,7 @@
 "use client";
 
 import { updateStream } from "@/actions/stream";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Switch } from "@/components/ui/switch";
 import { useTransition } from "react";
 import { toast } from "sonner";
@@ -42,3 +43,9 @@ const ToggleCard = ({
 }
 
 export default ToggleCard
+
+export const ToggleCardSkeleton = () => {
+	return (
+		<Skeleton className="w-full p-10  rounded-xl" />
+	)
+}

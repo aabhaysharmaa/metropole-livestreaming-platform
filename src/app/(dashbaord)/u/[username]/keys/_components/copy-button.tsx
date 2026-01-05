@@ -23,7 +23,7 @@ const CopyButton = ({ value }: CopyButtonProps) => {
 	const Icon = isCopied ? CheckCheck : Copy
 
 	return (
-		<Button size={"sm"} disabled={!value || isCopied} className='cursor-pointer bg-zinc-500 text-white' onClick={onCopy} >
+		<Button size={"sm"} disabled={!value || isCopied} className='cursor-pointer hover:bg-neutral-500 bg-neutral-700 text-white' onClick={onCopy} >
 			<Icon className='size-4' />
 		</Button>
 	)

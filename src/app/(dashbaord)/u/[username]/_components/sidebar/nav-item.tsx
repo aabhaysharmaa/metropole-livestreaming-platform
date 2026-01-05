@@ -7,9 +7,8 @@ import { useCreatorSideBar } from "@/store/use-cretor-sidebar";
 import { LucideIcon } from "lucide-react"
 import Link from "next/link";
 
-
 interface NavItemProps {
-	icon?: LucideIcon  ,
+	icon?: LucideIcon,
 	isActive: boolean;
 	href: string;
 	label: string
@@ -30,7 +29,9 @@ const NavItem = ({
 		>
 			<Link href={href}>
 				<div className="flex items-center gap-x-4">
-					<Icon className={cn("size-4", collapsed ? "mr-0" : "mr-2")} />
+					{Icon && (
+						<Icon className={cn("size-4", collapsed ? "mr-0" : "mr-2")} />
+					)}
 					{!collapsed && (
 						<span>{label}</span>
 					)}

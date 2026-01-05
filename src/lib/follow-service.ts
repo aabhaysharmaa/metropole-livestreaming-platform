@@ -108,7 +108,14 @@ export const getFollowedUsers = async () => {
 		const self = await getSelf();
 		const followedUsers = await prisma.follow.findMany({
 			where: {
-				followerId: self.id
+				followerId: self.id,
+				following: {
+					blocking: {
+						none: {
+							BlockedId: self.id
+						}
+					}
+				}
 			}, include: {
 				following: true
 			}

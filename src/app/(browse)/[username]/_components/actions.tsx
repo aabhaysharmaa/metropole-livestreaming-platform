@@ -1,15 +1,17 @@
 "use client";
+import { onBlock, onUnBlock } from "@/actions/block";
 import { onFollow, onUnFollow } from "@/actions/follow";
 import { Button } from "@/components/ui/button";
-import { useTransition } from "react";
+import { startTransition, useTransition } from "react";
 import { toast } from "sonner";
 
 interface ActionsProps {
 	isFollowing: boolean
 	userId: string
+	isBlocked: boolean
 }
 
-export const Actions = ({ isFollowing, userId }: ActionsProps) => {
+export const Actions = ({ isFollowing, userId, isBlocked }: ActionsProps) => {
 
 	const [isPending, setTransition] = useTransition();
 	const handleFollow = () => {
@@ -31,7 +33,6 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
 		})
 	}
 
-
 	const onClick = () => {
 		if (isFollowing) {
 			return handleUnFollow();
@@ -39,6 +40,29 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
 			return handleFollow();
 		}
 	}
+
+
+	const handleBlock = () => {
+		startTransition(() => {
+			onBlock(userId).then((data) => {
+				toast.success(` ${data?.blocked.username && "Blocked User"}  ${data?.blocked.username ? data.blocked.username : "Already Blocked User"}`)
+			}).catch(() => {
+				toast.error("Something went Wrong!");
+			})
+		})
+	}
+
+	const handleUnBlock = async () => {
+		setTransition(() => {
+			onUnBlock(userId).then((data) => {
+				toast.success(`Unblocked user ${data?.blocked.username}`)
+			}).catch(() => {
+				toast.error("something went Wrong!")
+			})
+		})
+	}
+
+
 
 	return (
 		<div className="flex w-full flex-row space-x-5">
@@ -48,6 +72,12 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
 				disabled={isPending}
 				variant="primary" >
 				{isFollowing ? "unFollow" : "Follow"}
+			</Button>
+			<Button
+				variant="primary"
+				onClick={handleBlock}
+				disabled={isPending}>
+				Block
 			</Button>
 		</div>
 	)

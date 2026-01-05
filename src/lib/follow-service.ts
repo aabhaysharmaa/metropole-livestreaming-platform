@@ -17,7 +17,7 @@ export const isFollowingUser = async (id: string) => {
 			where: {
 				followerId: self.id,
 				followingId: otherUser.id
-			}
+			},
 		})
 
 		return !!existingFollower;
@@ -117,7 +117,11 @@ export const getFollowedUsers = async () => {
 					}
 				}
 			}, include: {
-				following: true
+				following: {
+					include: {
+						stream: true
+					}
+				}
 			}
 		})
 		return followedUsers

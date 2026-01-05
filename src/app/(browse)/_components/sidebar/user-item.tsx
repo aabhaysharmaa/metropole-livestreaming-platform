@@ -19,10 +19,10 @@ const UserItem = ({
 	imageUrl,
 	isLive
 }: UserItemProps) => {
-	const pathname = usePathname();
+	// const pathname = usePathname();
 	const href = `/${username}`;
 	const { collapsed } = useSideBar();
-	const isActive = pathname === href;
+	// const isActive = pathname === href;
 
 	return (
 		<Button
@@ -34,16 +34,16 @@ const UserItem = ({
 					<UserAvatar
 						username={username}
 						imageUrl={imageUrl}
-						isLive={false}
+						isLive={isLive}
 					/>
 					{!collapsed && (
 						<p className="truncate">
 							{username}
 						</p>
 					)}
-					{/* {!collapsed && isLive && (
+					{!collapsed && isLive && (
 						<LiveBadge className="ml-auto" />
-					)} */}
+					)}
 				</div>
 			</Link>
 		</Button>

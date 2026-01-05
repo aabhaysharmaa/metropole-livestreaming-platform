@@ -10,4 +10,5 @@
  */
 export type * from './models/User'
 export type * from './models/Follow'
+export type * from './models/Block'
 export type * from './commonInputTypes'

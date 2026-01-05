@@ -27,3 +27,8 @@ export type User = Prisma.UserModel
  * 
  */
 export type Follow = Prisma.FollowModel
+/**
+ * Model Block
+ * 
+ */
+export type Block = Prisma.BlockModel

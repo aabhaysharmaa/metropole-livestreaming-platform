@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const Home = () => {
   return (
-    <div className={cn("flex-1 ")}>
+    <div className={cn("")}>
       Home
     </div>
   )

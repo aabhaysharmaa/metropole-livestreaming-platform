@@ -27,7 +27,7 @@ const UserItem = ({
 	return (
 		<Button
 
-			className={cn("w-full h-12 hover:bg-neutral-600 bg-[#252731]/50 ", collapsed ? "justify-center" : "justify-start", false && "bg-accent")}
+			className={cn("w-full text-white h-12 hover:bg-neutral-600 bg-[#252731]/50 ", collapsed ? "justify-center" : "justify-start", false && "bg-accent")}
 			asChild>
 			<Link href={href}>
 				<div className={cn("flex items-center w-full gap-x-4", collapsed && "justify-center")}>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 
 interface NavItemProps {
-	icon?: LucideIcon,
+	icon?: LucideIcon  ,
 	isActive: boolean;
 	href: string;
 	label: string
@@ -26,7 +26,7 @@ const NavItem = ({
 		<Button
 			asChild
 			variant={"button"}
-			className={cn("w-full h-12", collapsed ? "justify-center" : "justify-start", isActive && "bg-neutral-700")}
+			className={cn("w-full h-12", collapsed ? "justify-center" : "justify-start", isActive && "bg-neutral-900")}
 		>
 			<Link href={href}>
 				<div className="flex items-center gap-x-4">

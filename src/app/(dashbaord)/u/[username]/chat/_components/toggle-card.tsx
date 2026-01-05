@@ -29,7 +29,7 @@ const ToggleCard = ({
 		})
 	}
 	return (
-		<div className="bg-neutral-800 p-6 rounded-xl">
+		<div className="bg-[#252731] p-6 rounded-xl">
 			<div className="flex items-center justify-between">
 				<p className="font-bold">{label}</p>
 				<Switch

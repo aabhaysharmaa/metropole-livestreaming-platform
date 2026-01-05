@@ -8,7 +8,7 @@ Metropole is a modern, high-performance live streaming platform designed for cre
 
 Metropole enables creators to go live using industry-standard streaming protocols while offering viewers a rich, interactive experience. The platform focuses on performance, reliability, and a clean user experience.
 
-**Now supporting streaming up to 8K resolution** for ultra-high-definition live broadcasts, with **real-time interactive chat** and a **dedicated streaming player** for smooth playback.
+**Now supporting streaming up to 8K resolution**, including **console-based streaming (PS5, Xbox)**, with **real-time interactive chat** and a **dedicated streaming player** for smooth, low-latency playback.
 
 ---
 
@@ -17,61 +17,88 @@ Metropole enables creators to go live using industry-standard streaming protocol
 ### Streaming & Infrastructure
 
 * Streaming support using **RTMP and WHIP protocols**
-* **2k to 8K ultra-high-definition streaming support**
+* **2K to 8K ultra-high-definition streaming support**
 * Automatic ingress generation for streams
 * Easy connection to OBS and other streaming software
+* Native **console streaming support (PS5, Xbox)**
+* Capture card compatibility (Elgato, AverMedia, etc.)
 * Live status management
 * Live viewer count
 * Webhook-based syncing of live status data
 
-### Streaming & Customization
+---
+
+### Streaming Providers & Customization
 
 * Support for user-defined preferred streaming providers
-* Users can select and save their favorite streaming provider in their account settings
+* Users can select and save their favorite streaming provider in account settings
 * Seamless integration with multiple streaming providers
 * Provider preference persisted and reused across streams
-* **Dedicated streaming player** with:
+* Dedicated streaming player with:
 
-  * Adaptive bitrate support for smooth playback
-  * Low-latency streaming for real-time interaction
+  * Adaptive bitrate streaming
+  * Ultra-low latency playback
   * Full-screen and theatre modes
-  * Integration with live chat and reaction features
+  * Integrated live chat and reactions
+
+---
+
+### Console & External Device Streaming
+
+* Stream directly from **PS5 / consoles** to Metropole
+* Support for built-in console RTMP output
+* OBS + capture card workflow support
+* Console-optimized bitrate and latency presets
+* Automatic gameplay thumbnail generation
+* Game audio and voice chat mixing
+* Stream start/stop status syncing
+
+---
 
 ### Real-Time Chat & Community
 
-* **Fully real-time chat** using WebSockets
-* **Unique color assigned to each viewer** for easy identification
-* **Slow mode** to limit message frequency in high-traffic streams
-* **Chat delay mode** to prevent spam during live broadcasts
-* **Followers-only chat mode** for exclusive engagement
-* **Offense/block moderation mode** to kick or ban disruptive participants
-* Ability to enable or disable chat per stream
-* Real-time updates for viewers joining or leaving
-* Community tab for engagement and interaction
+* Fully real-time chat using **WebSockets**
+* Unique color assigned to each viewer
+* Slow mode to limit message frequency
+* Chat delay mode for spam prevention
+* Followers-only chat mode
+* Kick, mute, and ban moderation tools
+* Enable or disable chat per stream
+* Real-time join/leave indicators
+* Community tab for engagement
+
+---
 
 ### Creator Tools
 
-* Streamer / Creator dashboard with **real-time stream and chat analytics**
-* Thumbnail upload for streams
+* Creator dashboard with real-time analytics
+* Stream health and quality monitoring
+* Thumbnail upload and management
 * Live stream status indicators
-* Full control over chat modes (slow mode, delay mode, followers-only, offense moderation)
-* Real-time management of participants
-* Streamer can customize player settings (quality options, autoplay, theatre mode)
+* Full control over chat modes
+* Participant moderation tools
+* Player configuration controls
+
+---
 
 ### UI & UX
 
-* **Dedicated streaming player** embedded in all stream views
-* Collapsible layout (theatre mode, hide chat, hide sidebars)
-* Sidebar with following list and recommended streams
-* Home page with stream recommendations, sorted by live status
-* Search results page with a dedicated layout
-* Clean, modern, and visually appealing design
+* Dedicated streaming player embedded across the platform
+* Theatre mode and collapsible layouts
+* Hide chat and sidebars for focus viewing
+* Sidebar with following and recommended streams
+* Home page with live-first recommendations
+* Dedicated search results layout
+* Clean, modern, creator-focused UI
+
+---
 
 ### Performance & Architecture
 
 * Server-Side Rendering (SSR)
-* Grouped routes and layouts
-* Blazing fast performance
+* Optimized route grouping and layouts
+* High-performance backend architecture
+* Horizontally scalable streaming pipeline
 * MySQL database
 
 ---
@@ -81,7 +108,7 @@ Metropole enables creators to go live using industry-standard streaming protocol
 * **Frontend:** Next.js
 * **Backend:** Node.js
 * **Streaming:** RTMP, WHIP (up to 8K)
-* **Real-time:** WebSockets (for chat and live updates)
+* **Real-time:** WebSockets
 * **Database:** MySQL
 * **Rendering:** Server-Side Rendering (SSR)
 
@@ -94,7 +121,8 @@ Metropole enables creators to go live using industry-standard streaming protocol
 * Node.js (latest LTS recommended)
 * MySQL database
 * Streaming software (OBS or compatible)
-* RTMP/WHIP-compatible streaming server capable of **8K output**
+* PS5 / console (optional)
+* RTMP / WHIP-compatible streaming server supporting **8K output**
 
 ### Installation
 

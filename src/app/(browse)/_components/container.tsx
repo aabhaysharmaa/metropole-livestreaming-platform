@@ -18,7 +18,7 @@ const Container = ({ children }: { children: ReactNode }) => {
 	}, [matches, onCollapse, onExpand])
 
 	return (
-		<div className={cn("", collapsed ? "ml-17.5" : "ml-60")}>
+		<div className={cn("flex-1", collapsed ? "ml-17.5" : "ml-60")}>
 			{children}
 		</div>
 	)

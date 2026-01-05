@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Follow, User } from "@/generated/prisma/client";

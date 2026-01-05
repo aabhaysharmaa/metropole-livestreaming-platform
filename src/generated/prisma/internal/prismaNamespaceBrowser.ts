@@ -50,6 +50,7 @@ export const AnyNull = runtime.objectEnumValues.instances.AnyNull
 
 export const ModelName = {
   User: 'User',
+  Stream: 'Stream',
   Follow: 'Follow',
   Block: 'Block'
 } as const
@@ -81,6 +82,25 @@ export const UserScalarFieldEnum = {
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const StreamScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  thumbnailUrl: 'thumbnailUrl',
+  ingressId: 'ingressId',
+  serverUrl: 'serverUrl',
+  streamKey: 'streamKey',
+  isLive: 'isLive',
+  isChatEnabled: 'isChatEnabled',
+  isChatDelayed: 'isChatDelayed',
+  isChatFollowersOnly: 'isChatFollowersOnly',
+  userId: 'userId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type StreamScalarFieldEnum = (typeof StreamScalarFieldEnum)[keyof typeof StreamScalarFieldEnum]
 
 
 export const FollowScalarFieldEnum = {

@@ -12,7 +12,12 @@ export async function POST(req: NextRequest) {
         data: {
           username: evt.data.username ?? "",
           imageUrl: evt.data.image_url,
-          externalUserId: evt.data.id
+          externalUserId: evt.data.id,
+          stream: {
+            create: {
+              name: `${evt.data.username}'s stream`
+            }
+          }
         }
       })
     }

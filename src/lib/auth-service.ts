@@ -1,6 +1,5 @@
-import  prisma   from "@/lib/prismadb";
-import { currentUser } from "@clerk/nextjs/server" ;
-
+import prisma from "@/lib/prismadb";
+import { currentUser } from "@clerk/nextjs/server";
 
 export const getSelf = async () => {
 	const self = await currentUser();
@@ -13,9 +12,27 @@ export const getSelf = async () => {
 		}
 	})
 
-
 	if (!user) {
 		throw new Error("Not Found")
 	}
-	return  user
+	return user;
+}
+
+export const getSelfByUsername = async (username: string) => {
+	const self = await getSelf();
+
+	if (!self || !self.username) {
+		throw new Error("Unauthorized");
+	}
+	const user = await prisma.user.findUnique({
+		where: { username }
+	})
+	if (!user) {
+		throw new Error("User not found")
+	}
+
+	if (self.username !== user.username) {
+		throw new Error("Unauthorized")
+	}
+	return user;
 }

@@ -20,7 +20,7 @@ const Actions = async () => {
 			)}
 			{!!user &&
 				<div className="flex items-center gap-x-4">
-					<Button   size={"sm"} className="flex items-center cursor-pointer text-zinc-400 hover:text-white/70"  asChild>
+					<Button  variant={"button"}  size="sm" className="flex items-center cursor-pointer hover:bg-[#252731] text-zinc-400 hover:text-white/70"  asChild>
 						<Link href={`/u/${user.username}`} className="flex gap-2 items-center justify-center text-muted-foreground">
 							<Clapperboard className="size-5" />
 							<span className="hidden lg:flex ">Dashboard</span>

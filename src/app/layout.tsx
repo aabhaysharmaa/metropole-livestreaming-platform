@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
-import {Toaster} from "sonner"
+import { Toaster } from "sonner"
+import { Providers } from "@/components/theme-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,23 +21,25 @@ export const metadata: Metadata = {
   icons: "/twitch.avif"
 };
 
-export default  function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <ClerkProvider appearance={{
-     theme : dark
+      theme: dark
     }}>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
-      >
-        <Toaster theme="light" position="bottom-center"/>
-        {children}
-      </body>
-    </html>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
+        >
+          <Toaster theme="light" position="bottom-center" />
+          {/* <Providers> */}
+            {children}
+          {/* </Providers> */}
+        </body>
+      </html>
     </ClerkProvider>
   );
 }

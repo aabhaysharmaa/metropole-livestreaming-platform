@@ -18,7 +18,7 @@ const Wrapper = ({ children }: WrapperProps) => {
 
   if(!isClient) {
 	return (
-		<aside className='fixed left-0 w-17.5 md:w-60 h-full bg-zinc-800 z-50'>
+		<aside className='fixed left-0 w-17.5 md:w-60 h-full bg-[#252731] z-50'>
 			<ToggleSkeleton/>
 			<FollowingSkeleton/>
 			<RecommendedSkeleton/>

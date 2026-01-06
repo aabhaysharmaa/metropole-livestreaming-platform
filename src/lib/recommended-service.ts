@@ -3,7 +3,6 @@ import { getSelf } from "./auth-service";
 
 export const getRecommended = async () => {
 	let userId;
-
 	try {
 		const self = await getSelf();
 		userId = self.id;
@@ -52,7 +51,11 @@ export const getRecommended = async () => {
 			orderBy: {
 				createdAt: "desc"
 			}, include: {
-				stream: true
+				stream: {
+					select : {
+						isLive : true
+					}
+				}
 			}
 
 		})

@@ -55,13 +55,13 @@ export const createIngress = async (ingressType: IngressInput) => {
 		options.bypassTranscoding = true;
 		options.video = {
 			source: TrackSource.CAMERA,
-			preset: IngressVideoEncodingPreset.H264_1080P_30FPS_3_LAYERS, // ✅ valid preset
+			preset: IngressVideoEncodingPreset.H264_1080P_30FPS_3_LAYERS, //  valid preset
 		};
 	} else {
 		options.audio = {
 			source: TrackSource.MICROPHONE,
 			codec: "opus",       // or AudioCodec.OPUS if imported
-			bitrate: 96000,      // 96 kbps
+			bitrate: 96000,      // 96   kbps
 			channels: 2,         // stereo
 			sampleRate: 48000,   // typical for Opus
 		};
@@ -84,7 +84,7 @@ export const createIngress = async (ingressType: IngressInput) => {
 
 	revalidatePath(`/u${self.username}/keys`);
 
-	// ✅ return plain object, not class instance
+	//  return plain object, not class instance
 	return {
 		ingressId: ingress.ingressId,
 		url: ingress.url,

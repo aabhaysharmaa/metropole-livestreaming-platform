@@ -26,7 +26,7 @@ const Actions = async () => {
 							<span className="hidden lg:flex ">Dashboard</span>
 						</Link>
 					</Button>
-					<UserButton afterSignOutUrl="/sign-in" />
+					<UserButton />
 				</div>
 			}
 		</div>

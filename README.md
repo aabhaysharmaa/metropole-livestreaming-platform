@@ -55,6 +55,23 @@ Metropole enables creators to go live using industry-standard streaming protocol
 
 ---
 
+### Loading Skeletons (Professional UI Feedback)
+
+Metropole now includes fully integrated loading skeletons for a polished and responsive user experience. This ensures users never see blank screens while content is loading. Features include:
+
+* Stream Preview Skeletons: Placeholder cards for live streams while data loads
+
+* Chat Skeletons: Shows message boxes with shimmer effect while chat connects
+
+* Sidebar Skeletons: Loading placeholders for following and recommended streams
+
+* Dashboard Skeletons: Creator dashboard placeholders with real-time analytics layout
+
+* Adaptive Skeletons: Automatically match content type (video, chat, stats)
+
+* Smooth Animation: Subtle shimmer and fade-in for professional feel
+
+These skeletons improve perceived performance and provide a premium, modern UX for both creators and viewers.
 ### Real-Time Chat & Community
 
 * Fully real-time chat using **WebSockets**

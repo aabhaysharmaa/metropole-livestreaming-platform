@@ -2,7 +2,18 @@ import prisma from "@/lib/prismadb";
 
 export const getUserByUsername = async (username: string) => {
 	const user = await prisma.user.findUnique({
-		where: { username }
+		where: { username }, include: {
+			stream: true
+		}
 	})
 	return user
+}
+
+export const getUserById = async (id: string) => {
+	const user = await prisma.user.findUnique({
+		where: { id }, include: {
+			stream: true
+		}
+	})
+	return user ;
 }
